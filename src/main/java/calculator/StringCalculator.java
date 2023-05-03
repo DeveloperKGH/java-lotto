@@ -6,8 +6,8 @@ import java.util.Arrays;
 import java.util.regex.Pattern;
 
 public class StringCalculator {
-    private static final int ZERO = 0;
     public static final String DEFAULT_DELIMITER = " ";
+    private static final int ZERO = 0;
     private static final Pattern NUMERIC_REGEX_PATTERN = Pattern.compile("^[+-]?\\d*(\\.?\\d*)$");
     private static final Pattern OPERATION_SYMBOL_REGEX_PATTERN = Pattern.compile("[+\\-*/]");
 
