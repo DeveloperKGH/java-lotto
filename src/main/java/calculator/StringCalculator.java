@@ -16,7 +16,7 @@ public class StringCalculator {
         String[] values = validateArray(textInput.split(DEFAULT_DELIMITER));
 
         for (int i = 0; i < values.length; i++) {
-            isValidArrayElement(i, values[i]);
+            validateArrayElement(i, values[i]);
         }
 
         return values;
@@ -52,7 +52,7 @@ public class StringCalculator {
         return number % 2 == ZERO;
     }
 
-    private static void isValidArrayElement(int index, String value) {
+    private static void validateArrayElement(int index, String value) {
         if (isEvenNumber(index + 1)) {
             isOperationSymbol(value);
             return;
