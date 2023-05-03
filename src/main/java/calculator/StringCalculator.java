@@ -12,7 +12,7 @@ public class StringCalculator {
     private static final Pattern OPERATION_SYMBOL_REGEX_PATTERN = Pattern.compile("[+\\-*/]");
 
     public static String[] split(String textInput) {
-        isBlank(textInput);
+        validateTextInput(textInput);
         String[] values = isSizeEvenNumber(textInput.split(DEFAULT_DELIMITER));
 
         for (int i = 0; i < values.length; i++) {
@@ -35,7 +35,7 @@ public class StringCalculator {
         return result;
     }
 
-    private static void isBlank(String textInput) {
+    private static void validateTextInput(String textInput) {
         if (textInput == null || textInput.isBlank()) {
             throw new IllegalArgumentException("입력된 문자열이 null 또는 공백 일 수 없습니다.");
         }
