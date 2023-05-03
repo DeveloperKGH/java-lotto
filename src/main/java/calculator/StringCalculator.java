@@ -13,7 +13,7 @@ public class StringCalculator {
 
     public static String[] split(String textInput) {
         validateTextInput(textInput);
-        String[] values = isSizeEvenNumber(textInput.split(DEFAULT_DELIMITER));
+        String[] values = validateArray(textInput.split(DEFAULT_DELIMITER));
 
         for (int i = 0; i < values.length; i++) {
             isValidArrayElement(i, values[i]);
@@ -41,7 +41,7 @@ public class StringCalculator {
         }
     }
 
-    private static String[] isSizeEvenNumber(String[] values) {
+    private static String[] validateArray(String[] values) {
         if (isEvenNumber(values.length)) {
             throw new IllegalArgumentException("분리된 문자열 배열 size 는 짝수 일 수 없습니다.");
         }
