@@ -31,8 +31,7 @@
 ## 2단계 - 로또(자동) 요구사항
 
 ---
-- [ ] 유효하지 않은 금액이 입력된 경우 IllegalArgumentException 예외가 발생하는지 확인 (ex: null or "")
-- [ ] 입력된 금액이 1000원 미만인 경우 IllegalArgumentException 예외가 발생하는지 확인 (ex: 900)
+- [x] 입력된 금액이 1000원 미만인 경우 IllegalArgumentException 예외가 발생하는지 확인 (ex: 900)
 - [ ] 입력된 금액이 1000원 단위가 아닌 경우 IllegalArgumentException 예외가 발생하는지 확인 (ex: 1150)
 - [ ] 입력된 금액만큼 로또 구입 가능한 갯수가 반환되는지 확인 (ex: 15000 -> 15개)
 - [ ] 유효하지 않은 로또번호를 입력한 경우 IllegalArgumentException 예외가 발생하는지 확인 (ex: null or "")
