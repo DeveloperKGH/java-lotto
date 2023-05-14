@@ -1,20 +1,15 @@
 package lotto;
 
 public class LottoTicketBox {
+    public static final int UNIT_PRICE = 1000;
+
     public static void buyTickets(int money) {
-        if (money < 1000) {
-            throw new IllegalArgumentException("입력된 금액이 1000원 미만일 수 없습니다.");
-        }
-
-        if (money % 1000 != 0) {
-            throw new IllegalArgumentException("입력된 금액이 1000원 단위가 아닙니다.");
-        }
-
+        InputValidator.validateMoney(money);
         getBuyableQuantity(money);
     }
 
     public static int getBuyableQuantity(int money) {
-        return money / 1000;
+        return money / UNIT_PRICE;
     }
 
 }
