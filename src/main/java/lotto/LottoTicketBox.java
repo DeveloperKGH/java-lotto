@@ -9,5 +9,12 @@ public class LottoTicketBox {
         if (money % 1000 != 0) {
             throw new IllegalArgumentException("입력된 금액이 1000원 단위가 아닙니다.");
         }
+
+        getBuyableQuantity(money);
     }
+
+    public static int getBuyableQuantity(int money) {
+        return money / 1000;
+    }
+
 }
