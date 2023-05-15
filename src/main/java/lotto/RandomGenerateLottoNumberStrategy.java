@@ -6,7 +6,7 @@ import java.util.List;
 
 public class RandomGenerateLottoNumberStrategy implements GenerateLottoNumberStrategy {
     @Override
-    public List<LottoNumber> generate(int size) {
+    public List<LottoNumber> generate(int size, SortLottoNumberStrategy strategy) {
         List<LottoNumber> tempNumbers = new ArrayList<>();
 
         for (int number = LottoNumber.MIN; number <= LottoNumber.MAX; number++) {
@@ -15,8 +15,7 @@ public class RandomGenerateLottoNumberStrategy implements GenerateLottoNumberStr
 
         Collections.shuffle(tempNumbers);
         tempNumbers = CollectionUtil.subListFromZeroToEnd(size, tempNumbers);
-        Collections.sort(tempNumbers);
 
-        return tempNumbers;
+        return strategy.sort(tempNumbers);
     }
 }
