@@ -1,5 +1,6 @@
 package lotto;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,7 +12,7 @@ public class LottoTicket {
             throw new IllegalArgumentException("로또 티켓의 번호는 6자리여야 합니다.");
         }
 
-        this.numbers = strategy.generate(size);
+        this.numbers = validateDuplicateNumbers(strategy.generate(size));
     }
 
     public static LottoTicket create(int size, GenerateLottoNumberStrategy strategy) {
@@ -29,5 +30,13 @@ public class LottoTicket {
     @Override
     public int hashCode() {
         return Objects.hash(numbers);
+    }
+
+    private List<LottoNumber> validateDuplicateNumbers(List<LottoNumber> numbers) {
+        if (new HashSet<>(numbers).size() != numbers.size()) {
+            throw new IllegalArgumentException("로또 번호에 중복된 숫자가 있습니다.");
+        }
+
+        return numbers;
     }
 }
