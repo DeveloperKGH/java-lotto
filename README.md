@@ -34,8 +34,7 @@
 - [x] 입력된 금액이 1000원 미만인 경우 IllegalArgumentException 예외가 발생하는지 확인 (ex: 900)
 - [x] 입력된 금액이 1000원 단위가 아닌 경우 IllegalArgumentException 예외가 발생하는지 확인 (ex: 1150)
 - [x] 입력된 금액만큼 로또 구입 가능한 갯수가 반환되는지 확인 (ex: 15000 -> 15개)
-- [ ] 유효하지 않은 로또번호를 입력한 경우 IllegalArgumentException 예외가 발생하는지 확인 (ex: null or "")
-- [ ] 로또 번호의 범위가 유효하지 않다면 IllegalArgumentException 예외 발생 (ex: num < 1 or num > 45)
+- [x] 로또 번호의 범위가 유효하지 않다면 IllegalArgumentException 예외 발생 (ex: num < 1 or num > 45)
 - [ ] 로또 번호 객체가 정상적으로 생성되는지 확인
 - [ ] 로또 티켓의 번호가 6개가 아닌경우 IllegalArgumentException 예외가 발생하는지 확인 (ex: [1, 2, 3])
 - [ ] 로또 티켓의 번호 중 중복이 있다면 IllegalArgumentException 예외가 발생하는지 확인 (ex: [1, 2, 2, 3, 3, 4])
