@@ -10,6 +10,10 @@ public class CollectionUtil {
             return collection;
         }
 
+        if (end <= ZERO) {
+            throw new ArrayIndexOutOfBoundsException("end 가 0보다 같거나 작을 수 없습니다.");
+        }
+
         return collection.subList(ZERO, end);
     }
 }
