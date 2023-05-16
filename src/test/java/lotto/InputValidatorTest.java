@@ -29,4 +29,12 @@ public class InputValidatorTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("입력된 당첨번호가 6자리여야 합니다.");
     }
+
+    @DisplayName("입력된 당첨번호의 범위가 유효하지 않다면 IllegalArgumentException 예외 발생")
+    @Test
+    void lotto_winning_number_is_out_of_range() {
+        assertThatThrownBy(() -> InputValidator.validateLottoWinningNumbers(new int[]{0, 1, 2, 3, 4, 5}))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("당첨된 번호는 1미만 또는 45 초과일 수 없습니다.");
+    }
 }
