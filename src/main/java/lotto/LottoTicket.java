@@ -5,10 +5,12 @@ import java.util.List;
 import java.util.Objects;
 
 public class LottoTicket {
+    public static final int DEFAULT_LOTTO_NUMBER_SIZE = 6;
+
     private final List<LottoNumber> numbers;
 
     public LottoTicket(int size, GenerateLottoNumberStrategy generateStrategy, SortLottoNumberStrategy sortStrategy) {
-        if (size != 6) {
+        if (size != DEFAULT_LOTTO_NUMBER_SIZE) {
             throw new IllegalArgumentException("로또 티켓의 번호는 6자리여야 합니다.");
         }
 
