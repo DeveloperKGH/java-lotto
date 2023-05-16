@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public enum ReturnRateStatus {
 
-    LOSS("손해", 0, 0.99),
-    PROFIT("이득", 1.01, 2);
+    LOSS("손해", 0, 1),
+    PROFIT("이득", 1, 2);
 
     private final String value;
     private final double startRate;
@@ -25,7 +25,7 @@ public enum ReturnRateStatus {
     }
 
     public boolean betweenRate(double rate) {
-        return this.startRate <= rate && this.endRate >= rate;
+        return this.startRate <= rate && this.endRate > rate;
     }
 
     public String getValue() {
