@@ -28,4 +28,18 @@ public class NumberUtilTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("음수는 입력할 수 없습니다.");
     }
+
+    @DisplayName("입력된 문자열이 double 로 반환되는지 확인")
+    @Test
+    void toDouble_with_valid_value() {
+        assertThat(NumberUtil.toDouble("1.23")).isEqualTo(1.23);
+    }
+
+    @DisplayName("입력된 문자열이 숫자가 아닌 다른 형태의 값이 있는경우 IllegalArgumentException 반환되는지 확인")
+    @Test
+    void toDouble_with_not_numeric_element() {
+        assertThatThrownBy(() -> NumberUtil.toDouble("1.a"))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("숫자 이외의 값은 입력할 수 없습니다.");
+    }
 }
