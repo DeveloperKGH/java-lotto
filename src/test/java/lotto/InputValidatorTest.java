@@ -21,4 +21,12 @@ public class InputValidatorTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("입력된 금액이 1000원 단위가 아닙니다.");
     }
+
+    @DisplayName("입력된 당첨번호가 6개가 아닌경우 IllegalArgumentException 예외가 발생하는지 확인")
+    @Test
+    void lotto_winning_numbers_size_is_not_6() {
+        assertThatThrownBy(() -> InputValidator.validateLottoWinningNumbers(new int[]{1, 2, 3}))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("입력된 당첨번호가 6자리여야 합니다.");
+    }
 }
