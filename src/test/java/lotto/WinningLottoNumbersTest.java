@@ -31,4 +31,11 @@ public class WinningLottoNumbersTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("당첨번호는 6자리여야 합니다.");
     }
+
+    @DisplayName("로또 당첨번호 6개가 아닌경우 IllegalArgumentException 예외가 발생하는지 확인")
+    @Test
+    void match_winning_lotto_numbers() {
+        WinningLottoNumbers winningLottoNumbers = WinningLottoNumbers.create(lottoNumbers);
+        assertThat(winningLottoNumbers.countMatchNumbers(Arrays.asList(new LottoNumber(1), new LottoNumber(2), new LottoNumber(20)))).isEqualTo(2);
+    }
 }
