@@ -1,4 +1,6 @@
-package lotto;
+package lotto.util;
+
+import lotto.util.NumberUtil;
 
 public class StringUtil {
     public static final String DEFAULT_DELIMITER = ", ";

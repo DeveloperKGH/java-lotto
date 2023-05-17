@@ -1,5 +1,6 @@
-package lotto;
+package lotto.util;
 
+import lotto.util.StringUtil;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

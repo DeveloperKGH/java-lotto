@@ -1,5 +1,6 @@
-package lotto;
+package lotto.util;
 
+import lotto.util.CollectionUtil;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

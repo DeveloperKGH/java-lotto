@@ -1,4 +1,4 @@
-package lotto;
+package lotto.util;
 
 public class InputValidator {
     public static final int UNIT_PRICE = 1000;

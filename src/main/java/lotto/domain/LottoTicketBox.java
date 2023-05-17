@@ -1,4 +1,6 @@
-package lotto;
+package lotto.domain;
+
+import lotto.util.InputValidator;
 
 public class LottoTicketBox {
     public static final int UNIT_PRICE = 1000;

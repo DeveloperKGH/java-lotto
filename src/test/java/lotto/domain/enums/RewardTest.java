@@ -1,5 +1,6 @@
-package lotto;
+package lotto.domain.enums;
 
+import lotto.domain.enums.Reward;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
